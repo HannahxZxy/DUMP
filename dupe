@@ -1,0 +1,23 @@
+local plr = game.Players.LocalPlayer
+local dupe = {}
+
+for i=1,80 do table.insert(dupe,tonumber(12)) end -- IF YOU WANT MORE THAN 80 AMMO, CHANGE THE (80) TO WHATEVER NUMBER
+
+settings().Network.IncomingReplicationLag = math.huge
+wait()
+for i,v in pairs(dupe) do
+   local h = v
+   
+   local args = {
+       [1] = h,
+       [2] = "0:0:0:0"
+   }game:GetService("ReplicatedStorage").Item:FireServer(unpack(args))
+end
+wait(0.5)
+settings().Network.IncomingReplicationLag = 0
+wait(#dupe/19)
+for i,v in pairs(plr.Backpack:GetChildren()) do
+   if v.Name == "C4" or v.Name == "Fire bomb" or v.Name == "Grenade" or v.Name == "Bear trap" then
+       v:Destroy()
+   end
+end
