@@ -120,8 +120,8 @@ updateList(ignoreTeamList)
 
 SaveManager:BuildConfigSection(mainTab)
 SaveManager:LoadAutoloadConfig()
-Library:Notify("hai :3")
-Library:Notify("Press right ctrl to open the menu")
+Library:Notify("cumhaxx loaded")
+Library:Notify("RSHIFT to open cumhaxx")
 
 local function WaitForChildWhichIsA(parent, name)
 	while parent:FindFirstChildWhichIsA(name) == nil do
