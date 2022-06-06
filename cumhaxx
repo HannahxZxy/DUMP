@@ -42,8 +42,8 @@ if game.PlaceId == 111311599 then -- Critical Strike
 end
 
 -- thanks inori and wally
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/random-scripts/main/okui?token=GHSAT0AAAAAABUBAA7MDY36UT57XU2CFG7CYU6MR5Q"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/random-scripts/main/oksave?token=GHSAT0AAAAAABUBAA7NOU4FIFCR7A4RLLDMYU6MRLA"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/random-scripts/main/okui"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/random-scripts/main/oksave"))()
 SaveManager:SetLibrary(Library)
 SaveManager:SetFolder("HitboxExtender")
 
