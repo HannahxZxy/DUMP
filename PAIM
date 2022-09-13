@@ -113,8 +113,8 @@ end
 end
 end)
 
-mouse.KeyDown:connect(function(key)
-if key == "p" then
+User.InputBegan:Connect(function(inputObject)
+   if(inputObject.KeyCode==Enum.KeyCode.P) then
 if aimat == 'Head' then
 aimat = 'Torso'
            GuiService:SetCore("SendNotification", {Title = "cumhaxx AB", Text = "AB aim for torso";})
