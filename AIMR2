@@ -154,7 +154,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** at "..game.PlaceId.."",
+           ["description"] = "Username: at "..game.PlaceId.." " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** ",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
