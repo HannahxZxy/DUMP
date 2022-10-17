@@ -124,13 +124,13 @@ end
 end)
 
 User.InputBegan:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.UserInputType.Backquote) then
+   if(inputObject.KeyCode==Enum.Keycode.F) then
        enabled = true
    end
 end)
 
 User.InputEnded:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.UserInputType.Backquote) then
+   if(inputObject.KeyCode==Enum.Keycode.F) then
        enabled = false
    end
 end)
