@@ -124,13 +124,13 @@ end
 end)
 
 User.InputBegan:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.ButtonR2) then
+   if(inputObject.KeyCode==Enum.UserInputType.MouseButton2) then
        enabled = true
    end
 end)
 
 User.InputEnded:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.ButtonR2) then
+   if(inputObject.KeyCode==Enum.UserInputType.MouseButton2) then
        enabled = false
    end
 end)
