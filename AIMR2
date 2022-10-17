@@ -153,12 +153,12 @@ local data = {
    ["content"] = "",
    ["embeds"] = {
        {
-           ["title"] = "**Someone Executed Your Script!**",
-           ["description"] = "Username: at "..game.PlaceId.." " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** ",
+           ["title"] = "**SCRIPT WAS EXECUTED!!!! **",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** at "..game.PlaceId.."",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+               ["url"] = "https://cdn.discordapp.com/attachments/1008062583124807761/1031650756811567294/unknown_1.png" ..
                    tostring(game:GetService("Players").LocalPlayer.Name)
            }
        }
