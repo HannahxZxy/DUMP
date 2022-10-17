@@ -124,20 +124,17 @@ end
 end)
 
 User.InputBegan:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.F) then
+   if(inputObject.KeyCode==Enum.KeyCode.LeftShift) then
        enabled = true
    end
 end)
 
 User.InputEnded:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.F) then
+   if(inputObject.KeyCode==Enum.KeyCode.LeftShift) then
        enabled = false
    end
 end)
 GuiService:SetCore("SendNotification", {Title = "AimR2", Text = "AimR2 is ready.";})
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 local webhookcheck =
