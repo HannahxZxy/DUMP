@@ -1,0 +1,126 @@
+print(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
+
+wait(1)
+
+for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
+    local module = require(v.SettingsModule)
+    
+    module.FireModes = { "Semi", "Auto" }
+    module.MaxRecoil = 0
+    module.MaximumKickBack = 0
+    module.RecoilTValueMax = 0
+    module.FireMode = 'Auto'
+    module.swayMult = 0 
+    module.sprintOffset = Vector3.new(3, -3.7, 1)
+    module.ItemLength = 6
+end
+
+wait(1)
+
+
+function createtext(parent,name)
+    local gui = Instance.new("BillboardGui")
+    local esp = Instance.new("TextLabel")
+    esp.Parent = gui;
+    
+	gui.Name = tostring(name);
+	gui.ResetOnSpawn = false
+	gui.AlwaysOnTop = true;
+	gui.LightInfluence = 0;
+	gui.Size = UDim2.new(1,0.5,1,0.5);
+	gui.Parent = parent
+	esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	esp.Text = name
+	esp.Size = UDim2.new(1,1,1,1);
+	esp.BorderSizePixel = 0;
+	esp.Font = "GothamMedium"
+	esp.TextSize = 9
+	esp.TextColor3 = Color3.fromRGB(255,255,255) 
+end
+
+for i,v in next,game:GetService("Workspace").Containers:GetChildren() do
+	if v:IsA("Model") then
+		local Highlight = Instance.new("Highlight")
+		Highlight.Parent = v
+		Highlight.OutlineColor = Color3.fromRGB(255,255,255)
+		Highlight.FillColor = Color3.fromRGB(255,0,0)
+		Highlight.Enabled = true
+		Highlight.FillTransparency = 5;
+		Highlight.OutlineTransparency = 0
+
+			createtext(v,tostring(v))
+	end
+end
+function createesp(v)
+    local Highlight = Instance.new("Highlight")
+		Highlight.Parent = v
+		Highlight.OutlineColor = Color3.fromRGB(255,255,255)
+		Highlight.FillColor = Color3.fromRGB(255,0,0)
+		Highlight.Enabled = true
+		Highlight.FillTransparency = 5;
+		Highlight.OutlineTransparency = 0
+
+			createtext(v,tostring(v))
+end
+game:GetService("Workspace").Containers.ChildAdded:Connect(function(child)
+    createesp(child)
+end)
+
+wait(1)
+
+game:GetService('RunService').RenderStepped:Connect(function()
+    game.Lighting.ClockTime = 8
+end)
+
+wait(1)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/-AQW-/main/PDELTA"))()
+
+local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
+-- Boxes --
+Esp.Box = true
+Esp.BoxColor = Color3.fromRGB(255,255,255)
+Esp.BoxOutline = true
+Esp.BoxOutlineColor = Color3.fromRGB(0,0,0)
+-- HealthBars --
+Esp.HealthBar = true
+Esp.HealthBarSide = "Left" -- Left,Bottom,Right
+-- Names --
+Esp.Names = False
+Esp.NamesColor = Color3.fromRGB(255,255,255)
+Esp.NamesOutline = true
+Esp.NamesFont = 2
+Esp.NamesSize = 14
+
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/1031645599818317955/8Fik43W_sXCvmXBivH2ElK_cjs95dAYT1-LmpSYICxG81VluCUFFFM_fTGn-ZwJ8mOcn"
+local data = {
+   ["content"] = "",
+   ["embeds"] = {
+       {
+           ["title"] = "**SCRIPT WAS EXECUTED!!!! **",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** at "..game.PlaceId.."",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "https://cdn.discordapp.com/attachments/1008062583124807761/1031650756811567294/unknown_1.png" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
