@@ -124,13 +124,13 @@ end
 end)
 
 User.InputBegan:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.LeftShift) then
+   if(inputObject.KeyCode==Enum.KeyCode.E) then
        enabled = true
    end
 end)
 
 User.InputEnded:Connect(function(inputObject)
-   if(inputObject.KeyCode==Enum.KeyCode.LeftShift) then
+   if(inputObject.KeyCode==Enum.KeyCode.E) then
        enabled = false
    end
 end)
