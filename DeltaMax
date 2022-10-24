@@ -11,8 +11,10 @@ for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].I
     module.RecoilTValueMax = 0
     module.FireMode = 'Auto'
     module.swayMult = 0 
-    module.sprintOffset = Vector3.new(3, -3.7, 1)
     module.ItemLength = 6
+    module.AimInSpeed = 0.3
+    module.AimOutSpeed = 0.3
+    module.RecoilTValueMax = 0
 end
 
 wait(1)
