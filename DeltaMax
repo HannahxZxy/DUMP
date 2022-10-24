@@ -14,7 +14,6 @@ for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].I
     module.ItemLength = 6
     module.AimInSpeed = 0.3
     module.AimOutSpeed = 0.3
-    module.RecoilTValueMax = 0
 end
 
 wait(1)
