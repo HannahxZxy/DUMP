@@ -9,7 +9,7 @@ if v:FindFirstChild("Torso") and not v:FindFirstChildWhichIsA("MeshPart") then
 sethiddenproperty(v.Torso, "Massless", false)
 v.Torso.CanCollide = false
 v.Torso.Transparency = Transparency
-if v.Torso.Size ~= Vector3.new(Size, Size, Size) and v.Torso.Mesh.Scale ~= Vector3.new(Size, Size, Size) then
+if v.Torso.Size ~= Vector3.new(Size, Size, Size) and v.Torso.Mesh.Scale ~= Vector3.new(1, 1, 1) then
 v.Torso.Size = Vector3.new(Size, Size, Size)
 v.Torso.Mesh.Scale = Vector3.new(1, 1, 1)
 end
