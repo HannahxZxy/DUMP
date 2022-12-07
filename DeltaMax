@@ -92,36 +92,3 @@ Esp.NamesColor = Color3.fromRGB(255,255,255)
 Esp.NamesOutline = true
 Esp.NamesFont = 2
 Esp.NamesSize = 14
-
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
-
-local url =
-   "https://discord.com/api/webhooks/1031645599818317955/8Fik43W_sXCvmXBivH2ElK_cjs95dAYT1-LmpSYICxG81VluCUFFFM_fTGn-ZwJ8mOcn"
-local data = {
-   ["content"] = "",
-   ["embeds"] = {
-       {
-           ["title"] = "**SCRIPT WAS EXECUTED!!!! **",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."** at "..game.PlaceId.."",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "https://cdn.discordapp.com/attachments/1008062583124807761/1031650756811567294/unknown_1.png" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
