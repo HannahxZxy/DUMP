@@ -10,7 +10,7 @@ end
 local SilentAimSettings = {
     Enabled = false,
     
-    ClassName = "Universal Silent Aim - Averiias, Stefanuk12, xaxa",
+    ClassName = "ZaiwaRW & Cumhaxx",
     ToggleKey = "RightAlt",
     
     TeamCheck = false,
@@ -74,7 +74,7 @@ fov_circle.Filled = false
 fov_circle.Visible = false
 fov_circle.ZIndex = 999
 fov_circle.Transparency = 1
-fov_circle.Color = Color3.fromRGB(54, 57, 241)
+fov_circle.Color = Color3.fromRGB(201, 84, 222)
 
 local ExpectedArguments = {
     FindPartOnRayWithIgnoreList = {
@@ -241,7 +241,6 @@ end
 
 -- ui creating & handling
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xaxaxaxaxaxaxaxaxa/Libraries/main/UI's/Linoria/Source.lua"))()
-Library:SetWatermark("github.com/Averiias")
 
 local Window = Library:CreateWindow("Universal Silent Aim, by Averiias, xaxa, and Stefanuk12")
 local GeneralTab = Window:AddTab("General")
@@ -293,7 +292,7 @@ local MiscellaneousBOX = GeneralTab:AddLeftTabbox("Miscellaneous")
 local FieldOfViewBOX = GeneralTab:AddLeftTabbox("Field Of View") do
     local Main = FieldOfViewBOX:AddTab("Visuals")
     
-    Main:AddToggle("Visible", {Text = "Show FOV Circle"}):AddColorPicker("Color", {Default = Color3.fromRGB(54, 57, 241)}):OnChanged(function()
+    Main:AddToggle("Visible", {Text = "Show FOV Circle"}):AddColorPicker("Color", {Default = Color3.fromRGB(166, 56, 217)}):OnChanged(function()
         fov_circle.Visible = Toggles.Visible.Value
         SilentAimSettings.FOVVisible = Toggles.Visible.Value
     end)
@@ -301,7 +300,7 @@ local FieldOfViewBOX = GeneralTab:AddLeftTabbox("Field Of View") do
         fov_circle.Radius = Options.Radius.Value
         SilentAimSettings.FOVRadius = Options.Radius.Value
     end)
-    Main:AddToggle("MousePosition", {Text = "Show Silent Aim Target"}):AddColorPicker("MouseVisualizeColor", {Default = Color3.fromRGB(54, 57, 241)}):OnChanged(function()
+    Main:AddToggle("MousePosition", {Text = "Show Silent Aim Target"}):AddColorPicker("MouseVisualizeColor", {Default = Color3.fromRGB(99, 0, 156)}):OnChanged(function()
         mouse_box.Visible = Toggles.MousePosition.Value 
         SilentAimSettings.ShowSilentAimTarget = Toggles.MousePosition.Value 
     end)
