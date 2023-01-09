@@ -243,7 +243,7 @@ end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xaxaxaxaxaxaxaxaxa/Libraries/main/UI's/Linoria/Source.lua"))()
 
 local Window = Library:CreateWindow("ZaiwaRW & Cumhaxx")
-local GeneralTab = Window:AddTab("General")
+local GeneralTab = Window:AddTab("HAXX")
 local MainBOX = GeneralTab:AddLeftTabbox("Main") do
     local Main = MainBOX:AddTab("Main")
     
@@ -257,16 +257,16 @@ local MainBOX = GeneralTab:AddLeftTabbox("Main") do
         mouse_box.Visible = SilentAimSettings.Enabled
     end)
     
-    Main:AddToggle("TeamCheck", {Text = "Team Check", Default = SilentAimSettings.TeamCheck}):OnChanged(function()
+    Main:AddToggle("TeamCheck", {Text = "ztIkWgSpuL", Default = SilentAimSettings.TeamCheck}):OnChanged(function()
         SilentAimSettings.TeamCheck = Toggles.TeamCheck.Value
     end)
-    Main:AddToggle("VisibleCheck", {Text = "Visible Check", Default = SilentAimSettings.VisibleCheck}):OnChanged(function()
+    Main:AddToggle("VisibleCheck", {Text = "jeSkJMaPyA", Default = SilentAimSettings.VisibleCheck}):OnChanged(function()
         SilentAimSettings.VisibleCheck = Toggles.VisibleCheck.Value
     end)
-    Main:AddDropdown("TargetPart", {Text = "Target Part", Default = SilentAimSettings.TargetPart, Values = {"Head", "HumanoidRootPart", "Random"}}):OnChanged(function()
+    Main:AddDropdown("TargetPart", {Text = "pQHzGSRmgA", Default = SilentAimSettings.TargetPart, Values = {"Head", "HumanoidRootPart", "Random"}}):OnChanged(function()
         SilentAimSettings.TargetPart = Options.TargetPart.Value
     end)
-    Main:AddDropdown("Method", {Text = "Silent Aim Method", Default = SilentAimSettings.SilentAimMethod, Values = {
+    Main:AddDropdown("Method", {Text = "OzsXAGBiQt", Default = SilentAimSettings.SilentAimMethod, Values = {
         "Raycast","FindPartOnRay",
         "FindPartOnRayWithWhitelist",
         "FindPartOnRayWithIgnoreList",
@@ -274,7 +274,7 @@ local MainBOX = GeneralTab:AddLeftTabbox("Main") do
     }}):OnChanged(function() 
         SilentAimSettings.SilentAimMethod = Options.Method.Value 
     end)
-    Main:AddSlider('HitChance', {
+    Main:AddSlider('ykqBueSKRo', {
         Text = 'Hit chance',
         Default = 100,
         Min = 0,
@@ -292,11 +292,11 @@ local MiscellaneousBOX = GeneralTab:AddLeftTabbox("Miscellaneous")
 local FieldOfViewBOX = GeneralTab:AddLeftTabbox("Field Of View") do
     local Main = FieldOfViewBOX:AddTab("Visuals")
     
-    Main:AddToggle("Visible", {Text = "Show FOV Circle"}):AddColorPicker("Color", {Default = Color3.fromRGB(166, 56, 217)}):OnChanged(function()
+    Main:AddToggle("HuhrPlbWOg", {Text = "Show FOV Circle"}):AddColorPicker("Color", {Default = Color3.fromRGB(166, 56, 217)}):OnChanged(function()
         fov_circle.Visible = Toggles.Visible.Value
         SilentAimSettings.FOVVisible = Toggles.Visible.Value
     end)
-    Main:AddSlider("Radius", {Text = "FOV Circle Radius", Min = 0, Max = 360, Default = 130, Rounding = 0}):OnChanged(function()
+    Main:AddSlider("QphtGzolAx", {Text = "FOV Circle Radius", Min = 0, Max = 360, Default = 130, Rounding = 0}):OnChanged(function()
         fov_circle.Radius = Options.Radius.Value
         SilentAimSettings.FOVRadius = Options.Radius.Value
     end)
@@ -304,11 +304,11 @@ local FieldOfViewBOX = GeneralTab:AddLeftTabbox("Field Of View") do
         mouse_box.Visible = Toggles.MousePosition.Value 
         SilentAimSettings.ShowSilentAimTarget = Toggles.MousePosition.Value 
     end)
-    local PredictionTab = MiscellaneousBOX:AddTab("Prediction")
+    local PredictionTab = MiscellaneousBOX:AddTab("LHDNCtpJPE")
     PredictionTab:AddToggle("Prediction", {Text = "Mouse.Hit/Target Prediction"}):OnChanged(function()
         SilentAimSettings.MouseHitPrediction = Toggles.Prediction.Value
     end)
-    PredictionTab:AddSlider("Amount", {Text = "Prediction Amount", Min = 0.165, Max = 1, Default = 0.165, Rounding = 3}):OnChanged(function()
+    PredictionTab:AddSlider("ZAqXCcyJEQ", {Text = "Prediction Amount", Min = 0.165, Max = 1, Default = 0.165, Rounding = 3}):OnChanged(function()
         PredictionAmount = Options.Amount.Value
         SilentAimSettings.MouseHitPredictionAmount = Options.Amount.Value
     end)
