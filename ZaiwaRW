@@ -257,16 +257,16 @@ local MainBOX = GeneralTab:AddLeftTabbox("Main") do
         mouse_box.Visible = SilentAimSettings.Enabled
     end)
     
-    Main:AddToggle("TeamCheck", {Text = "ztIkWgSpuL", Default = SilentAimSettings.TeamCheck}):OnChanged(function()
+    Main:AddToggle("TeamCheck", {Text = "Team Check", Default = SilentAimSettings.TeamCheck}):OnChanged(function()
         SilentAimSettings.TeamCheck = Toggles.TeamCheck.Value
     end)
-    Main:AddToggle("VisibleCheck", {Text = "jeSkJMaPyA", Default = SilentAimSettings.VisibleCheck}):OnChanged(function()
+    Main:AddToggle("VisibleCheck", {Text = "Visible Check", Default = SilentAimSettings.VisibleCheck}):OnChanged(function()
         SilentAimSettings.VisibleCheck = Toggles.VisibleCheck.Value
     end)
-    Main:AddDropdown("TargetPart", {Text = "pQHzGSRmgA", Default = SilentAimSettings.TargetPart, Values = {"Head", "HumanoidRootPart", "Random"}}):OnChanged(function()
+    Main:AddDropdown("TargetPart", {Text = "Target Part", Default = SilentAimSettings.TargetPart, Values = {"Head", "HumanoidRootPart", "Random", "UpperTorso}}):OnChanged(function()
         SilentAimSettings.TargetPart = Options.TargetPart.Value
     end)
-    Main:AddDropdown("Method", {Text = "OzsXAGBiQt", Default = SilentAimSettings.SilentAimMethod, Values = {
+    Main:AddDropdown("Method", {Text = "Silent Aim Method", Default = SilentAimSettings.SilentAimMethod, Values = {
         "Raycast","FindPartOnRay",
         "FindPartOnRayWithWhitelist",
         "FindPartOnRayWithIgnoreList",
@@ -274,7 +274,7 @@ local MainBOX = GeneralTab:AddLeftTabbox("Main") do
     }}):OnChanged(function() 
         SilentAimSettings.SilentAimMethod = Options.Method.Value 
     end)
-    Main:AddSlider('ykqBueSKRo', {
+    Main:AddSlider('HitChance', {
         Text = 'Hit chance',
         Default = 100,
         Min = 0,
