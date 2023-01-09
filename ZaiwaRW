@@ -55,7 +55,7 @@ local GetMouseLocation = UserInputService.GetMouseLocation
 local resume = coroutine.resume 
 local create = coroutine.create
 
-local ValidTargetParts = {"Head", "HumanoidRootPart"}
+local ValidTargetParts = {"Head", "HumanoidRootPart", "UpperTorso"}
 local PredictionAmount = 0.165
 
 local mouse_box = Drawing.new("Square")
@@ -243,7 +243,7 @@ end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xaxaxaxaxaxaxaxaxa/Libraries/main/UI's/Linoria/Source.lua"))()
 
 local Window = Library:CreateWindow("ZaiwaRW & Cumhaxx")
-local GeneralTab = Window:AddTab("HAXX")
+local GeneralTab = Window:AddTab("General")
 local MainBOX = GeneralTab:AddLeftTabbox("Main") do
     local Main = MainBOX:AddTab("Main")
     
