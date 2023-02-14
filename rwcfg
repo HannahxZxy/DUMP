@@ -3136,12 +3136,18 @@ Sections.Misc.Lighting:Slider{
  
 -- * Removals * --
 Sections.Misc.Removals:Button{
-    Name = "Firemode Unlocker",
-    for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
-        local module = require(v.SettingsModule)
-        
-        module.FireModes = { "Semi", "Auto" }
+    Name = "Name Above Head",
+    Callback  = function()
+        if Alive(plr) then
+            if plr:FindFirstChild("Head") then
+                if plr.Head:FindFirstChild("PlayerTag") then
+                    plr.Head.PlayerTag:Destroy()
+                    Library:SendNotification(("Player tag removed"), 5, Color3.fromRGB(255, 255, 255))
+                end
+            end
         end
+        Library:SendNotification(("Failed to remove player tag"), 5, Color3.fromRGB(255, 255, 255))
+    end
 }
 local dwLandMines = ws.AiZones:FindFirstChild("OutpostLandmines")
 if dwLandMines then
