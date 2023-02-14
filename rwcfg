@@ -1555,14 +1555,10 @@ local hitSounds = {
     Neverlose = "rbxassetid://8726881116",
     Gamesense = "rbxassetid://4817809188",
     Rust = "rbxassetid://1255040462",
-    ["Among Us"] = "rbxassetid://5700183626",
     ["CS:GO"] = "rbxassetid://6937353691",
-    ["Call of Duty"] = "rbxassetid://5952120301",
-    Click = "rbxassetid://8053704437",
-    Steve = "rbxassetid://4965083997",
     ["zai voice"] = "9061419173",
     ["spy tf2"] = "3037275416",
-    ["unsure works"] = "6192113995",
+    ["unsure works"] = "6192113995"
 }
  
 local allSounds = {}
