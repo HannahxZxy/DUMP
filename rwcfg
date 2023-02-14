@@ -1556,7 +1556,7 @@ local hitSounds = {
     Gamesense = "rbxassetid://4817809188",
     Rust = "rbxassetid://1255040462",
     ["CS:GO"] = "rbxassetid://6937353691",
-    zaivoice = "rbxassetid://9061419173",
+    mommyvoice = "rbxassetid://9061419173",
     spytf2 = "rbxassetid://3037275416",
     unsurework = "rbxassetid://6192113995"
 }
