@@ -1560,6 +1560,9 @@ local hitSounds = {
     ["Call of Duty"] = "rbxassetid://5952120301",
     Click = "rbxassetid://8053704437",
     Steve = "rbxassetid://4965083997",
+    ["zai voice"] = "9061419173",
+    ["spy tf2"] = "3037275416",
+    ["unsure works"] = "6192113995",
 }
  
 local allSounds = {}
