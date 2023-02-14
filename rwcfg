@@ -1257,7 +1257,7 @@ Sections.Aimbot.Aimbot:Toggle{
     Flag = "aimbotfriendcheckEnabled"
 }
 Sections.Aimbot.Aimbot:Toggle{
-    Name = "Prediction",
+    Name = "Prediction (this is broken too)",
     Flag = "predictionEnabled",
     Callback = function(bool)
         Environment.Settings.Prediction = bool
@@ -1556,9 +1556,9 @@ local hitSounds = {
     Gamesense = "rbxassetid://4817809188",
     Rust = "rbxassetid://1255040462",
     ["CS:GO"] = "rbxassetid://6937353691",
-    ["zai voice"] = "9061419173",
-    ["spy tf2"] = "3037275416",
-    ["unsure works"] = "6192113995"
+    zaivoice = "rbxassetid://9061419173",
+    spytf2 = "rbxassetid://3037275416",
+    unsurework = "rbxassetid://6192113995"
 }
  
 local allSounds = {}
