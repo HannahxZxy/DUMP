@@ -38,6 +38,8 @@ end
 end
 end)
 
+wait(1)
+
 game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
 plr = game.Players.LocalPlayer
 hum = plr.Character.HumanoidRootPart
@@ -71,4 +73,3 @@ for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].I
     module.AimOutSpeed = 0.001
     module.FireRate = 0.047
 end
-
