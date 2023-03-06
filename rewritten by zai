@@ -24,6 +24,8 @@ Esp.NamesOutline = true
 Esp.NamesFont = 2
 Esp.NamesSize = 14
 
+print("ready")
+print("made by 2prtty4u#8688")
 
 for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
     local module = require(v.SettingsModule)
