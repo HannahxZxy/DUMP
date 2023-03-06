@@ -54,9 +54,6 @@ end
 end)
 end)
 
-while wait() do
-print("made by 2prtty4u#8688")
-end 
 
 local UserInputService = game:GetService("UserInputService")
 local camera = game.Workspace.CurrentCamera
@@ -80,16 +77,12 @@ UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
     end
 end)
 
-for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
-    local module = require(v.SettingsModule)
-    
-    module.FireModes = { "Semi", "Auto" }
-    module.MaxRecoil = 0.001
-    module.MaximumKickBack = 0.001
-    module.RecoilTValueMax = 0.001
-    module.FireMode = 'Auto'
-    module.swayMult = 0.01
-    module.AimInSpeed = 0.001
-    module.AimOutSpeed = 0.001
-    module.FireRate = 0.047
-end
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/pdgunmods"))()
+
+while wait() do
+print("made by 2prtty4u#8688")
+end 
+
+
