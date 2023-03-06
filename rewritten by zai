@@ -10,11 +10,6 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HannahxZxy/DUMP/
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
 
-
-game:GetService('RunService').RenderStepped:Connect(function()
-    game.Lighting.ClockTime = 8
-end)
-
 local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
 -- Boxes --
 Esp.Box = true
