@@ -7,6 +7,8 @@ Duration = 5;
 })
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/cframe"))()
 
 local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
 -- Boxes --
@@ -36,9 +38,25 @@ end
 end
 end)
 
+game.Players.LocalPlayer.CharacterAdded:connect(function()
+plr = game.Players.LocalPlayer
+hum = plr.Character.HumanoidRootPart
+mouse = plr:GetMouse()
+
+mouse.KeyDown:connect(function(key)
+if key == "`" then
+if mouse.Target then
+hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 3, mouse.Hit.z)
+end
+end
+end)
+end)
+
 while wait() do
 print("made by 2prtty4u#8688")
 end 
+
+
 
 for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
     local module = require(v.SettingsModule)
@@ -53,3 +71,4 @@ for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].I
     module.AimOutSpeed = 0.001
     module.FireRate = 0.047
 end
+
