@@ -6,8 +6,6 @@ Icon = "rbxassetid://10445617348";
 Duration = 5;
 })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/pretty"))()
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
 
 local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
@@ -20,7 +18,7 @@ Esp.BoxOutlineColor = Color3.fromRGB(0,0,0)
 Esp.HealthBar = true
 Esp.HealthBarSide = "Left" -- Left,Bottom,Right
 -- Names --
-Esp.Names = True
+Esp.Names = true
 Esp.NamesColor = Color3.fromRGB(255,255,255)
 Esp.NamesOutline = true
 Esp.NamesFont = 2
