@@ -58,6 +58,7 @@ end)
 local UserInputService = game:GetService("UserInputService")
 local camera = game.Workspace.CurrentCamera
 local fov = camera.FieldOfView
+local keyzoom = Enum.KeyCode.G
 local zoomfuck = false
 
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
