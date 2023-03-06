@@ -6,7 +6,7 @@ Icon = "rbxassetid://10445617348";
 Duration = 5;
 })
 
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/pretty"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/pretty"))()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
 
