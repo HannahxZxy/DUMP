@@ -9,8 +9,6 @@ Duration = 5;
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
 wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/cframe"))()
-wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/zoombranch"))()
 
 local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
 -- Boxes --
@@ -60,7 +58,27 @@ while wait() do
 print("made by 2prtty4u#8688")
 end 
 
+local UserInputService = game:GetService("UserInputService")
+local camera = game.Workspace.CurrentCamera
+local fov = camera.FieldOfView
+local zoomfuck = false
 
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == keyzoom then
+        f1Held = true
+        while zoomfuck do
+            camera.FieldOfView = 15
+            wait()
+        end
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == keyzoom then
+        zoomfuck = false
+        camera.FieldOfView = 120
+    end
+end)
 
 for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
     local module = require(v.SettingsModule)
