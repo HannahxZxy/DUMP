@@ -26,14 +26,13 @@ Esp.NamesOutline = true
 Esp.NamesFont = 2
 Esp.NamesSize = 15
 
-local tpkey = "`"
 
 plr = game.Players.LocalPlayer
 hum = plr.Character.HumanoidRootPart
 mouse = plr:GetMouse()
 
 mouse.KeyDown:connect(function(key)
-if key == tpkey then
+if key == "`" then
 if mouse.Target then
 hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 3, mouse.Hit.z)
 end
@@ -48,7 +47,7 @@ hum = plr.Character.HumanoidRootPart
 mouse = plr:GetMouse()
 
 mouse.KeyDown:connect(function(key)
-if key == tpkey then
+if key == "`" then
 if mouse.Target then
 hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
 end
