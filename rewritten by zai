@@ -65,7 +65,7 @@ local zoomfuck = false
 
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if input.KeyCode == keyzoom then
-        f1Held = true
+        zoomfuck = true
         while zoomfuck do
             camera.FieldOfView = 15
             wait()
