@@ -1,0 +1,21 @@
+local UserInputService = game:GetService("UserInputService")
+local camera = game.Workspace.CurrentCamera
+local fov = camera.FieldOfView
+local zoomfuck = false
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == keyzoom then
+        f1Held = true
+        while zoomfuck do
+            camera.FieldOfView = 15
+            wait()
+        end
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == keyzoom then
+        zoomfuck = false
+        camera.FieldOfView = 120
+    end
+end)
