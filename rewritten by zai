@@ -1,0 +1,47 @@
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+Title = "MMMMADE BY ZAIWA"; 
+Text = "ur horrible<3 - made by 2prtty4u#8688"; 
+Icon = "rbxassetid://10445617348"; 
+Duration = 5;
+})
+
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/pretty"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/SILENT%20AIM"))()
+
+
+game:GetService('RunService').RenderStepped:Connect(function()
+    game.Lighting.ClockTime = 8
+end)
+
+local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
+-- Boxes --
+Esp.Box = true
+Esp.BoxColor = Color3.fromRGB(255,255,255)
+Esp.BoxOutline = true
+Esp.BoxOutlineColor = Color3.fromRGB(0,0,0)
+-- HealthBars --
+Esp.HealthBar = true
+Esp.HealthBarSide = "Left" -- Left,Bottom,Right
+-- Names --
+Esp.Names = True
+Esp.NamesColor = Color3.fromRGB(255,255,255)
+Esp.NamesOutline = true
+Esp.NamesFont = 2
+Esp.NamesSize = 14
+
+
+for i,v in next, game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
+    local module = require(v.SettingsModule)
+    
+    module.FireModes = { "Semi", "Auto" }
+    module.MaxRecoil = 0.001
+    module.MaximumKickBack = 0.001
+    module.RecoilTValueMax = 0.001
+    module.FireMode = 'Auto'
+    module.swayMult = 0.01
+    module.AimInSpeed = 0.001
+    module.AimOutSpeed = 0.001
+    module.FireRate = 0.047
+end
