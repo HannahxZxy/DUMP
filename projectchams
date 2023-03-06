@@ -1,0 +1,26 @@
+local players = game:GetService("Players")
+local localPlayer = players.LocalPlayer
+
+local color = Color3.fromRGB(255, 255, 255) -- Change this to any color you want
+local transparency = 0.5 -- Change this to adjust the transparency of the highlight
+
+local function createBox(player)
+    local box = Instance.new("BoxHandleAdornment")
+    box.Size = player.Character.HumanoidRootPart.Size
+    box.Adornee = player.Character.HumanoidRootPart
+    box.AlwaysOnTop = true
+    box.Transparency = transparency
+    box.Color3 = color
+    box.ZIndex = 5
+    box.Parent = player.Character.HumanoidRootPart
+end
+
+local function highlightPlayers()
+    for _, player in pairs(players:GetPlayers()) do
+        if player ~= localPlayer and player.Character then
+            createBox(player)
+        end
+    end
+end
+
+highlightPlayers()
