@@ -85,7 +85,7 @@ local zairewrite = {} do
     if zairewrite:get_target() then
         local attribute_velocity = zairewrite:get_bullet_atribute("MuzzleVelocity")
         local attribute_drop = zairewrite:get_bullet_atribute("ProjectileDrop")
-        local target_part = zairewrite:get_target() and zairewrite:get_target().Character:FindFirstChild("HEAD")
+        local target_part = zairewrite:get_target() and zairewrite:get_target().Character:FindFirstChild("Head")
         if attribute_velocity and attribute_drop and target_part then
             args[9] = {CFrame = CFrame.new(args[9].CFrame.p, zairewrite:predict_velocity(target_part, attribute_velocity) + Vector3.new(0, zairewrite:predict_drop(target_part, attribute_velocity, attribute_drop), 0))}
         end
