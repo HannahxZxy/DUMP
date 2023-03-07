@@ -5,7 +5,7 @@ local speed = Window:NewTab("2PRTTY4U")
 local rs = speed:NewSection("MADE BY ZAI")
 
 rs:NewButton("default speed is 0.47")
-rs:NewButton("DOUBLE PRESS I TO ENABLE
+rs:NewButton("DOUBLE PRESS I TO ENABLE")
 rs:NewButton("PRESS ME TO START", "I to use Speed", function()
         repeat
         wait()
