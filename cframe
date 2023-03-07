@@ -52,6 +52,6 @@ rs:NewButton("PRESS ME TO START", "I to use Speed", function()
         end
     end)
 end)
-rs:NewKeybind("Toggle UI", "KeybindInfo", Enum.KeyCode.RightControl , function()
+rs:NewKeybind("Toggle UI", "KeybindInfo", Enum.KeyCode.RightControl, function()
     Library.ToggleUI()
 end)
