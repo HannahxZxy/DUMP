@@ -1230,6 +1230,12 @@ Sections.Azai.Azai:Button{
         loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/azai2"))()
     end
 }
+Sections.Azai.Azai:Button{
+    Name = "Cframe Gui",
+    Callback  = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HannahxZxy/DUMP/main/cframe"))()
+    end
+}
 Library:SendNotification("Thank you zai for fucking with the silent aim! 2prtty4u#8688")
 
 local AimbotToggle = Sections.Aimbot.Aimbot:Toggle{
