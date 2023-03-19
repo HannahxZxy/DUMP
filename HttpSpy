@@ -61,7 +61,7 @@ end
 do
     rconsoleclear()
 ]])
-    rconsolename("Zaiwa fucked you", "@@LIGHT_MAGENTA@@")
+    rconsolename("Zaiwa fucked you", "uwu")
     rconsoleprint("@@LIGHT_MAGENTA@@")
     rprint("LIGHT_MAGENTA", "uwu")
 end
