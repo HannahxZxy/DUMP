@@ -60,16 +60,8 @@ end
 -- Title
 do
     rconsoleclear()
-    rprint("BLUE",[[
----------------------------------------------
-   __ __ ______ ______ ___    ____          
-  / // //_  __//_  __// _ \  / __/___  __ __
- / _  /  / /    / /  / ___/ _\ \ / _ \/ // /
-/_//_/  /_/    /_/  /_/    /___// .__/\_, / 
-                               /_/   /___/  
----------------------------------------------
 ]])
-    rconsolename("LIGHT_MAGENTA", "Fucked By Zai")
+    rconsolename("Zaiwa fucked you", "@@LIGHT_MAGENTA@@")
     rconsoleprint("@@LIGHT_MAGENTA@@")
     rprint("LIGHT_MAGENTA", "uwu")
 end
